@@ -1,10 +1,9 @@
 #!perl
 use strict;
 use warnings;
-use Test::More;
-use Test::InDomain;
+use Test::More tests => 8;
 
-plan tests => 7;
+BEGIN { use_ok('Test::InDomain'); }
 
 my $dom = Int(-min => 3);
 

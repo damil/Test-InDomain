@@ -124,16 +124,17 @@ symbols through L<Sub::Exporter> options, like for example :
 
   use Test::InDomain -constructors => {-prefix => "dom_"};
 
-The import list passed to L<Test::Domain> is transmitted directly to
-L<Data::Domain>; functions C<in_domain> and C<not_in_domain> are not
-affected by the import list and will be exported in any case.
+To achieve this, the import list passed to C<Test::InDomain> is
+transmitted directly to L<Data::Domain>; by contrast, functions
+specific to C<Test::InDomain>, namely C<in_domain> and
+C<not_in_domain>, are not affected by the import list and will be
+exported in any case.
 
 
 =head1 SEE ALSO
 
 Other ways to perform deep comparisons :
-L<Test::Mo
-re/is_deeply>, L<Test::Deep>.
+L<Test::More/is_deeply>, L<Test::Deep>.
 
 
 =head1 AUTHOR

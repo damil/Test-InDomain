@@ -1,10 +1,10 @@
 #!perl
 use strict;
 use warnings;
-use Test::More;
-plan tests => 2;
+use Test::More tests => 3;
 
-use Test::InDomain -constructors => {-prefix => "dom_"};
+
+BEGIN { use_ok('Test::InDomain', -constructors => {-prefix => "dom_"}); }
 
 my $dom = dom_Int(-min => 3);
 in_domain     5, $dom, "foo";
